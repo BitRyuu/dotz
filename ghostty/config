@@ -1,0 +1,22 @@
+font-family = JetBrains Mono Regular
+font-size = 16
+
+theme = "Catppuccin Mocha"
+#theme = "Carbonfox"
+#theme = "Dark Pastel"
+
+custom-shader = inside-the-matrix.glsl
+custom-shader = bettercrt.glsl
+
+cursor-style = "block"
+cursor-color = #f5c7fc
+
+background-opacity = 0.85
+background-blur-radius = 1
+
+window-padding-x = 6
+window-padding-y = 5
+
+macos-titlebar-style = tabs
+
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
