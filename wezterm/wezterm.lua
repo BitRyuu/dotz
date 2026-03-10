@@ -12,7 +12,7 @@ config.font = wezterm.font("JetBrains Mono Regular")
 -- Window settings
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
---config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 10,
 	right = 10,
@@ -95,12 +95,10 @@ config.colors.brights = {
 
 -- Keybindings
 config.keys = {
-	{ key = "V", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
-	{ key = "C", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
-	{ key = "K", mods = "CTRL|SHIFT", action = wezterm.action.ScrollByLine(-1) },
-	{ key = "J", mods = "CTRL|SHIFT", action = wezterm.action.ScrollByLine(1) },
-	{ key = "T", mods = "CTRL|SHIFT", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
-	{ key = "W", mods = "CTRL|SHIFT", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
+	{ key = "d", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "d", mods = "CMD|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "k", mods = "CMD", action = wezterm.action.SendString("clear\n") },
+	{ key = "w", mods = "CMD", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
 	{ key = "q", mods = "CMD", action = wezterm.action.QuitApplication },
 }
 

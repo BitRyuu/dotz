@@ -1,5 +1,5 @@
 # A message from Morpheus
-echo "Wake up, Neo..." | lolcat -a
+echo "\n  Wake up, Neo..." | lolcat -a
 
 # User Defined Aliases
 alias cls='clear'
