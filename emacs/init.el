@@ -7,7 +7,7 @@
 (load "performance")
 (load "paths")
 (load "ui")
-(load "eshell")
+(load "eshell-config")
 
 (load "projectile-config")
 (load "navigation")
