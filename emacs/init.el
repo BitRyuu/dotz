@@ -1,0 +1,26 @@
+(add-to-list 'load-path "~/.config/emacs/core")
+(add-to-list 'load-path "~/.config/emacs/ide")
+(add-to-list 'load-path "~/.config/emacs/lang")
+(add-to-list 'load-path "~/.config/emacs/fun")
+
+(load "packages")
+(load "performance")
+(load "paths")
+(load "ui")
+(load "eshell")
+
+(load "projectile-config")
+(load "navigation")
+(load "lsp")
+(load "treesit")
+(load "completion")
+(load "key-helper")
+
+(load "python")
+(load "go")
+(load "rust")
+(load "c")
+(load "swift")
+
+(load "nyan")
+(load "media")
