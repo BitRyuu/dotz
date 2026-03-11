@@ -1,4 +1,9 @@
 local wezterm = require("wezterm")
+local mux = wezterm.mux
+
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = mux.spawn_window({ position = { x = 600, y = 300 } })
+end)
 
 local config = wezterm.config_builder()
 
@@ -13,12 +18,7 @@ config.font = wezterm.font("JetBrains Mono Regular")
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
-config.window_padding = {
-	left = 10,
-	right = 10,
-	top = 10,
-	bottom = 10,
-}
+config.window_padding = { left = 25, right = 25, top = 30, bottom = 2 }
 
 --config.initial_rows = 20
 --config.initial_cols = 80
@@ -98,6 +98,7 @@ config.keys = {
 	{ key = "d", mods = "CMD", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "d", mods = "CMD|SHIFT", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "k", mods = "CMD", action = wezterm.action.SendString("clear\n") },
+	{ key = ",", mods = "CMD|SHIFT", action = wezterm.action.ReloadConfiguration },
 	{ key = "w", mods = "CMD", action = wezterm.action.CloseCurrentTab({ confirm = false }) },
 	{ key = "q", mods = "CMD", action = wezterm.action.QuitApplication },
 }

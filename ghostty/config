@@ -1,22 +1,33 @@
 font-family = JetBrains Mono Regular
-font-size = 16
+font-size = 17
+window-title-font-family = JetBrains Mono Regular 
 
 theme = "Catppuccin Mocha"
-#theme = "Carbonfox"
-#theme = "Dark Pastel"
 
-custom-shader = inside-the-matrix.glsl
-custom-shader = bettercrt.glsl
+#custom-shader = shaders/inside-the-matrix.glsl
+#custom-shader = shaders/bettercrt.glsl
+custom-shader = shaders/cursor_blaze.glsl
+custom-shader = shaders/cursur_smear.glsl
 
-cursor-style = "block"
-cursor-color = #f5c7fc
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-color = f5c7fc
 
 background-opacity = 0.85
-background-blur-radius = 1
+background-blur = 20
+#background-blur-radius = 1
 
-window-padding-x = 6
+window-padding-x = 20
 window-padding-y = 5
+window-height = 22
+window-width = 60
+window-position-x = 370
+window-position-y = 130
 
-macos-titlebar-style = tabs
+window-decoration = auto
+macos-titlebar-proxy-icon = hidden
+macos-window-buttons = hidden
+
+macos-icon = blueprint
 
 keybind = global:ctrl+grave_accent=toggle_quick_terminal
