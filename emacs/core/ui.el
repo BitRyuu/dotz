@@ -9,8 +9,8 @@
                     :font "JetBrains Mono"
                     :height 170)
 
-(set-frame-parameter (selected-frame) 'alpha '(95 . 95))
-(add-to-list 'default-frame-alist '(alpha . (95 . 90)))
+; (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
+; (add-to-list 'default-frame-alist '(alpha . (95 . 90)))
 
 (load-theme 'dracula t)
 
@@ -18,9 +18,5 @@
   :init (doom-modeline-mode 1)
   :custom
   (doom-modeline-height 25))
-
-(use-package which-key
-  :config
-  (which-key-mode))
 
 (setq treesit-font-lock-level 4)

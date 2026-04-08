@@ -13,7 +13,18 @@ alias nf='neofetch'
 alias ff='fastfetch'
 alias imgcat='wezterm imgcat'
 alias lsa='eza'
+alias pthls='echo $PATH | tr ":" "\n"'
 alias incdir='cd /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include'
+
+# color config for less
+export LESS_TERMCAP_mb=$'\e[01;31m'
+export LESS_TERMCAP_md=$'\e[01;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[01;4;31m'
+export MANROFFOPT="-c"
 
 # Custom Prompt init
 eval "$(starship init zsh)"

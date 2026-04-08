@@ -25,7 +25,9 @@ bk() {
     chpwd_functions=()
 
     builtin cd "$target"
+    local cd_status=$?
 
     # restore hooks
     chpwd_functions=("${old_chpwd_functions[@]}")
+    return $cd_status
 }
